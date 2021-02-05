@@ -1,9 +1,13 @@
 {
-  "name": "hitesh-comp229-401-repo",
-  "version": "0.0.0",
+  "name": "hitesh-portfolio",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "nodemon run ./server.js"
+  },
+  "engines": {
+    "node": "^10.0.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -16,5 +20,18 @@
     "jquery": "^3.5.1",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "description": "Hitesh's personal portfolio website",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieetesh/Hitesh_COMP229_401_Repo.git"
+  },
+  "author": "Hitesh Dharmadhikari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hieetesh/Hitesh_COMP229_401_Repo/issues"
+  },
+  "homepage": "https://github.com/hieetesh/Hitesh_COMP229_401_Repo#readme"
 }
