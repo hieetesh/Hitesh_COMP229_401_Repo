@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <!-- CSS style sheets -->
+    <link rel='stylesheet' href='/Content/style.css' />
+    <link rel="stylesheet" href='/bootstrap/dist/css/bootstrap.min.css'/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1> -->
+    
+    <%- include partials/mainNavBar.ejs %>
+
+    <div class="jumbotron">
+
+      <h1 class="display-4"><%= title %></h1>
+      
+    </div>
+
+    <%- include partials/bottomFooter.ejs %>
+
+
+    <!-- JS scripts-->
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>
