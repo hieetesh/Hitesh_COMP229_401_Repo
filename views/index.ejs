@@ -11,23 +11,95 @@
     <link rel="stylesheet" href='/bootstrap/dist/css/bootstrap.min.css'/>
     <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
   </head>
-  <body>
+  <body style="background-color: #DEDEDE;">
     <!-- <h1><%= title %></h1> -->
-    
-    <%- include partials/mainNavBar.ejs %>
+    <div class="mainSection">
 
-    <div class="jumbotron">
+      <%- include partials/mainNavBar.ejs %>
 
-      <h1 class="display-4"><%= title %></h1>
+      <!--<div id="home" class="jumbotron displayFrame">
+        <h1 class="display-4"><%= title %></h1>
+      </div> !-->
+
+      <section id="home">
+        <div class="subSection">
+          <br>
+          <h6>Hi, my name is</h6>
+          <h1><span>Hitesh</span> Dharmadhikari<span>.</span></h1>
+          <p>I build things for the web and mobile.</p>
+          <h4>I am a <strong>Full Stack</strong> Software Engineer based in Toronto, Canada specialized</h4>
+          <h4>in building websites, apps and everything in between.</h4>
+          <br><br><br>
+
+          <a href="#contact" class="buttonContact" style="border-color:#bf5e2e; background-color:rgba(0,0,0,0); color:black">Get In Touch</a>
+        
+        
+      </section>
+
+      
+        <!--<h1>Welcome To My About Page</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p> !-->
+        <!-- <div style="width:70%; margin:auto; background-color:blue">
+          <h2>01. About me</h2>
+          <div class="row" >
+            
+            <div class="col-xs-6">  
+              <h3>Hello World</h3>
+              <p style="font-size:20px; color:#03225C;">Lorem ipsum dolor sit amet, </p>
+            </div>
+            <div class="col-xs-6" style="float:right">
+              <img src="Assets/images/Hitesh_pic.png" style="height:300px; margin-left:100px;float:right" />
+            </div>
+          </div>
+        </div>
+        !-->
+        
+        <div id="about">
+        <br><br><br><br><br><br><br><br><br>
+        <section class="about-me"  style="text-align:left">
+         
+           <h2 class="section__title section__title--about" style="font-size:3rem"><span style="font-size:2rem; color:#bf5e2e">01.</span> About me</h2>
+           <p class="section__subtitle section__subtitle--about" style="font-size:1.5rem;color:#736F6F">Full Stack Software Engineer based out of Toronto</p>
+           
+           <div class="about-me__body">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+           </div>
+           
+           <img src="Assets/images/Hitesh_pic.png" width="300px" height="300px" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+        </div>
+
+      
+      <div id="projects" class="jumbotron displayFrame">
+        <h1 class="display-4">Projects</h1>
+      </div>
+      <div id="services" class="jumbotron displayFrame">
+        <h1 class="display-4">Services</h1>
+      </div>
+      <div id="contact" class="jumbotron displayFrame">
+        <h1 class="display-4">Contact</h1>
+      </div>
+      
       
     </div>
-
     <%- include partials/bottomFooter.ejs %>
 
 
     <!-- JS scripts-->
     <script src="/jquery/dist/jquery.min.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="/Scripts/app.js"></script>
   </body>
 </html>

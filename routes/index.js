@@ -1,9 +1,37 @@
 var express = require('express');
 var router = express.Router();
 
+const socialMediaFooter = {
+  email: 'dharmadhikarihitesh@gmail.com',
+  socialMedia: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/bchiang7',
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/bchiang7',
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/bchiang7',
+    },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/bchiang7',
+    },
+  ],
+
+}
+
+// <% socialMediaFooter.socialMedia.forEach(function(handle, index) { %>
+//   <h6><%= handle.name %></h6>
+// <% }) %>
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Home' , socialMediaFooter : socialMediaFooter });
 });
 
 /* GET About page. */

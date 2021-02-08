@@ -1,1 +1,189 @@
 
+
+body{
+    padding-top: 70px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DEDEDE;
+    height: 100vh;
+    line-height: 1.6;
+}
+
+.navbarStyle {
+    position: fixed !important;
+    width: 100%;
+    z-index: 1;
+    top:0;
+}
+
+/* RESUME BUTTON STYLING */
+
+.styleButton {
+    border-radius: 4px;
+    background-color: #bf5e2e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 4px 12px;
+    /* border-radius: 12px; */
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .styleButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .styleButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .styleButton:hover span {
+    padding-right: 25px;
+  }
+  
+  .styleButton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .styleButton a{
+      text-decoration: none;
+  }
+
+  /* Social Media Link Buttons */
+
+  .listSocial{
+    list-style: none;
+    position: fixed;
+    z-index: 10000;
+  }
+
+  .socialButtonColor{
+      color: #bf5e2e !important;
+      
+  }
+
+
+  /* Sections Styling */
+
+  .displayFrame {
+      height: 580px;
+  }
+
+  .nav-item{
+      font-size: 18px;
+  }
+
+  .nav-link:hover {
+    color: #bf5e2e !important;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #DEDEDE;
+  }
+
+  .subSection{
+      width: 70%;
+      height:100%;
+      margin: auto;
+      /* background-color: green; */
+      text-align: center;
+      
+  }
+  
+  #home h6 {
+    padding-top: 100px;
+    font-size: 1.5rem;
+    text-align:left;
+  }
+  #home h1{
+    font-size: 5rem;
+    text-align:left;
+    
+  }
+
+  #home h1 span{
+    color: #bf5e2e;
+  }
+
+  #home p{
+      font-size: 4rem;
+      text-align: left;
+      color: #736F6F;
+  }
+  #home h4{
+      text-align: left;
+  }
+
+  .buttonContact {
+    display:inline-block;
+    padding:0.46em 1.6em;
+    border:0.1em solid #bf5e2e;
+    margin:0 0.2em 0.2em 0;
+    text-decoration: none;
+    border-radius: 0.12 em;
+    box-sizing: border-box;
+    color:#000000;
+    float: left;
+  }
+
+  .buttonContact:hover{
+    text-decoration: none;
+    color:#bf5e2e;
+    border-color:#bf5e2e;
+    background-color: #bf5e2e;
+  }
+
+
+
+
+
+
+  .about-me{
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+  }
+
+  @media (min-width: 600px){
+
+      .about-me{
+          display: grid;
+          text-align: center;
+          grid-template-columns: 1fr 200x;
+          grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img" ;
+          grid-column-gap:2mm;
+      }
+
+      .section__title--about{
+          grid-area: title;
+      }
+
+      .about-me__img{
+          grid-area: img;
+      }
+  }
+  
+    
