@@ -185,5 +185,133 @@ body{
           grid-area: img;
       }
   }
+
+
+  /* Services */
+
+  #services{
+    width: 70%;
+    height:100%;
+    margin: auto;
+    /* background-color: green; */
+    text-align: left;
+  }
+
+  .my-services {
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    text-align: center;
+  }
+
+.section__title--services {
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+.serviceButton {
+    display:inline-block;
+    padding:0.46em 1.6em;
+    border:0.1em solid #bf5e2e;
+    margin:0 0.2em 0.2em 0;
+    text-decoration: none;
+    border-radius: 0.12 em;
+    box-sizing: border-box;
+    color:#000000;
+    float: left;
+  }
+
+  /* footer */
+
+.footer {
+    background:#FFFFFF;
+    /* color: var(--clr-accent); */
+    text-align: center;
+    padding: 2.5em 0;
+    /* font-size: var(--fs-h3); */
+
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+/* .footer__link {
+    font-weight: var(--fw-bold);
+} */
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: none;
+    color: #bf5e2e
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+
+#projects{
+    width: 70%;
+    height:100%;
+    margin: auto;
+    /* background-color: green; */
+    text-align: left;
+}
+
+#contact{
+    width: 70%;
+    height:100%;
+    margin: auto;
+    /* background-color: green; */
+    text-align: left;
+}
+
   
     
