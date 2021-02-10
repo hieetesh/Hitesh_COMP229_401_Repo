@@ -26,4 +26,11 @@ router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact Us' });
 });
 
+/* POST Contact Us page. */
+router.post('/contact', function(req, res, next) {
+  console.log("input123: ", req.body);
+  contactName = req.body.fname;
+  res.redirect('/');
+});
+
 module.exports = router;
