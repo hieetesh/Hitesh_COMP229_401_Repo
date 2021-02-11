@@ -1,13 +1,23 @@
+/* 
+File Name: app.js
+Student Name: Hitesh Dharmadhikari
+Student ID: 301150694
+Date: 12/2/2021
+*/
+
 console.log("Started App");
 
-const scroll = new SmoothScroll('.navbar a[href*="#"]',{
+//Smooth Scroll animation for Navbar button click
+const navBarScroll = new SmoothScroll('.navbar a[href*="#"]',{
     speed: 800,
 });
 
-const scroll1 = new SmoothScroll('#home a[href*="#"]',{
+//Smooth Scroll animation for Get In Touch button click
+const contactScroll = new SmoothScroll('#home a[href*="#"]',{
     speed: 800,
 });
 
-const scroll2 = new SmoothScroll('#services a[href*="#"]',{
+//Smooth Scroll animation for Checkout My Work button click
+const projectScroll = new SmoothScroll('#services a[href*="#"]',{
     speed: 800,
 });

@@ -1,5 +1,11 @@
+/* 
+File Name: style.css
+Student Name: Hitesh Dharmadhikari
+Student ID: 301150694
+Date: 12/2/2021
+*/
 
-
+/* Body Styling */
 body{
     padding-top: 70px;
     margin-top: 50px;
@@ -9,6 +15,7 @@ body{
     line-height: 1.6;
 }
 
+/* Nav Bar Styling */
 .navbarStyle {
     position: fixed !important;
     width: 100%;
@@ -170,14 +177,9 @@ body{
         margin: auto;
         
     }
-    
-
   }    
 
-
-
   /* Styling the About me Section */
-
 
   .about-me{
       max-width: 1000px;
@@ -187,24 +189,24 @@ body{
 
   @media (min-width: 600px){
 
-      .about-me{
-          display: grid;
-          text-align: center;
-          grid-template-columns: 1fr 200x;
-          grid-template-areas: 
-            "title img"
-            "subtitle img"
-            "text img" ;
-          grid-column-gap:2mm;
-      }
+    .about-me{
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 200x;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img" ;
+        grid-column-gap:2mm;
+    }
 
-      .section__title--about{
-          grid-area: title;
-      }
+    .section__title--about{
+        grid-area: title;
+    }
 
-      .about-me__img{
-          grid-area: img;
-      }
+    .about-me__img{
+        grid-area: img;
+    }
   }
 
   @media (max-width: 600px){
