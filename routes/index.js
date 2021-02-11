@@ -28,7 +28,7 @@ router.get('/contact', function(req, res, next) {
 
 /* POST Contact Us page. */
 router.post('/contact', function(req, res, next) {
-  console.log("input123: ", req.body);
+  console.log("input: ", req.body);
   contactName = req.body.fname;
   res.redirect('/');
 });
