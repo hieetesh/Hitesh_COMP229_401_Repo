@@ -37,48 +37,48 @@ body{
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-  }
+}
   
-  .styleButton span {
+.styleButton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
+}
   
-  .styleButton span:after {
+.styleButton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
+}
   
-  .styleButton:hover span {
+.styleButton:hover span {
     padding-right: 25px;
-  }
+}
   
-  .styleButton:hover span:after {
+.styleButton:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
 
-  .styleButton a{
-      text-decoration: none;
-  }
+.styleButton a{
+    text-decoration: none;
+}
 
   /* Sections and subsections Styling */
 
-  .nav-item{
-      font-size: 18px;
-  }
+.nav-item{
+    font-size: 18px;
+}
 
-  .nav-link:hover {
+.nav-link:hover {
     color: #bf5e2e !important;
-  }
+}
 
-  section {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,46 +87,47 @@ body{
     width: 100%;
     height: auto;
     background-color: #DEDEDE;
-  }
+}
 
-  .subSection{
-      width: 70%;
-      height:100%;
-      margin: auto;
-      text-align: center;
-      
-  }
+.subSection{
+    width: 70%;
+    height:100%;
+    margin: auto;
+    text-align: center;
+    
+}
   
-  /* Styling the Home Section */
+/* Styling the Home Section */
 
-  #home h6 {
+#home h6 {
     padding-top: 100px;
     font-size: 1.5rem;
     text-align:left;
     margin-left: 2px;
-  }
-  #home h1{
+}
+#home h1{
     font-size: 5rem;
     text-align:left;
-    
-  }
 
-  #home h1 span{
+}
+
+#home h1 span{
     color: #bf5e2e;
-  }
+}
 
-  #home p{
-      font-size: 4rem;
-      text-align: left;
-      color: #736F6F;
-      margin-left: 2px;
-  }
-  #home h4{
-      text-align: left;
-      margin-left: 5px;
-  }
+#home p{
+    font-size: 4rem;
+    text-align: left;
+    color: #736F6F;
+    margin-left: 2px;
+}
 
-  .buttonContact {
+#home h4{
+    text-align: left;
+    margin-left: 5px;
+}
+
+.buttonContact {
     display:block;
     padding:0.46em 1.6em;
     border:0.1em solid #bf5e2e;
@@ -138,13 +139,13 @@ body{
     float: left;
     border-color:#bf5e2e; 
     background-color:rgba(0,0,0,0); 
-  }
+}
 
-  .buttonContact:hover{
+.buttonContact:hover{
     text-decoration: none;
-  }
+}
 
-  @media (max-width: 600px){
+@media (max-width: 600px){
     .subSection{
         width: 100%;
         text-align: center;
@@ -177,17 +178,20 @@ body{
         margin: auto;
         
     }
-  }    
+}    
 
   /* Styling the About me Section */
 
-  .about-me{
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: left;
-  }
+.about-me{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+.about-me-body{
+    margin-bottom: 20px;
+}
 
-  @media (min-width: 600px){
+@media (min-width: 600px){
 
     .about-me{
         display: grid;
@@ -200,16 +204,16 @@ body{
         grid-column-gap:2mm;
     }
 
-    .section__title--about{
+    .about-section-title{
         grid-area: title;
     }
 
     .about-me__img{
         grid-area: img;
     }
-  }
+}
 
-  @media (max-width: 600px){
+@media (max-width: 600px){
     
     #about{
         margin-left: 5px;
@@ -219,29 +223,37 @@ body{
         text-align: center !important;
     }
 
-  }
+    .about-me__img{
+        margin-bottom: 25px;
+    }
+
+    .aboutResumeButton{
+        width:50% !important;
+    }
+
+}
 
 
 
   /* Services */
 
-  #services{
+#services{
     width: 70%;
     height:100%;
     margin: auto;
     text-align: left;
-  }
+}
 
-  .my-services {
+.my-services {
     background-size: cover;
     text-align: center;
-  }
+}
 
-.section__title--services {
+.services-title {
     position: relative;
 }
 
-.section__title--services::after {
+.services-title::after {
     content: '';
     display: block;
     width: 2em;
@@ -343,14 +355,8 @@ body{
     text-decoration: none;
 }
 
-.footer__link:hover,
-.social-list__link:hover {
+.social-media-link:hover {
     opacity: .7;
-}
-
-.footer__link:hover {
-    text-decoration: none;
-    color: #bf5e2e
 }
 
 .social-list {
@@ -361,11 +367,11 @@ body{
     padding: 0;
 }
 
-.social-list__item {
+.social-list-item {
     margin: 0 .5em;
 }
 
-.social-list__link {
+.social-media-link {
     padding: .5em;
 }
 

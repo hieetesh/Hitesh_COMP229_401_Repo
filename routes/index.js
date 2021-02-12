@@ -1,3 +1,5 @@
+// Hello Professor, as we have discussed and agreed that I am creating a Single Page Application
+
 var express = require('express');
 var router = express.Router();
 
@@ -29,7 +31,6 @@ router.get('/contact', function(req, res, next) {
 /* POST Contact Us page. */
 router.post('/contact', function(req, res, next) {
   console.log("input: ", req.body);
-  contactName = req.body.fname;
   res.redirect('/');
 });
 
