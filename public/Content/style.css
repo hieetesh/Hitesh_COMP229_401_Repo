@@ -23,6 +23,28 @@ body{
     top:0;
 }
 
+/* Alert Message Styling */
+#alert-message{
+    background-color:#bf5e2e;
+    float:right;
+    margin-top:35px;
+    margin-right:25px;
+    width:25%;
+    height:auto;
+}
+
+@media (max-width: 600px){
+
+    #alert-message{
+        background-color:#bf5e2e;
+        float: none;
+        width:100%;
+        height:auto;
+    }
+
+}
+
+
 /* RESUME BUTTON STYLING */
 
 .styleButton {

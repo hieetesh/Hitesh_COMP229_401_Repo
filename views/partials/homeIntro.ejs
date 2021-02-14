@@ -1,4 +1,18 @@
 <section id="home">
+
+    <!-- Alert message after submitting the contact form -->
+
+    <% if(firstName != null && firstName != ""){ %>
+    <div id="alert-message" class="alert alert-success" role="alert">
+        <button style="float:left;margin-right:12px" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <span style="color:white">Thank you <strong> <%= firstName %> </strong>for contacting me. I will get back to you soon.</span>
+        
+    </div>
+    <% } %>
+
     <div class="subSection">
         <br>
         <h6>Hi, my name is</h6>

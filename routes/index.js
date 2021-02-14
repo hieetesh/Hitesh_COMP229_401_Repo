@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Home', firstName: null });
 });
 
 /* GET About page. */
@@ -29,9 +29,10 @@ router.get('/contact', function(req, res, next) {
 });
 
 /* POST Contact Us page. */
-router.post('/contact', function(req, res, next) {
+router.post('/', function(req, res, next) {
   console.log("input: ", req.body);
-  res.redirect('/');
+  let firstName = req.body.fname || req.body.lname || req.body.email;
+  res.render('index',{firstName: firstName});
 });
 
 module.exports = router;

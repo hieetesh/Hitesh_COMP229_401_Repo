@@ -21,3 +21,8 @@ const contactScroll = new SmoothScroll('#home a[href*="#"]',{
 const projectScroll = new SmoothScroll('#services a[href*="#"]',{
     speed: 800,
 });
+
+//Alert Fading animation
+$(".alert-success").fadeTo(2000, 500).slideUp(500, function(){
+    $("alert-success").slideUp(500);
+});
