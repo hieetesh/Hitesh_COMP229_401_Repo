@@ -19,7 +19,8 @@
     "http-errors": "~1.6.3",
     "jquery": "^3.5.1",
     "morgan": "~1.9.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "mongoose": "^5.10.2"
   },
   "description": "Hitesh's personal portfolio website",
   "main": "index.js",
