@@ -10,19 +10,19 @@ let contactListController = require('../controllers/contactList');
 /* GET Route for the Book List page - READ Operation */
 router.get('/', contactListController.displayContactList);
 
-// /* GET Route for displaying the Add page - CREATE Operation */
-// router.get('/add', bookController.displayAddPage);
+/* GET Route for displaying the Add page - CREATE Operation */
+//router.get('/add', contactListController.displayAddPage);
 
-// /* POST Route for processing the Add page - CREATE Operation */
-// router.post('/add', bookController.processAddPage);
+/* POST Route for processing the Add page - CREATE Operation */
+router.post('/add', contactListController.processAddContact);
 
 // /* GET Route for displaying the Edit page - UPDATE Operation */
-// router.get('/edit/:id', bookController.displayEditPage);
+router.get('/edit/:id', contactListController.getEditData);
 
 // /* POST Route for processing the Edit page - UPDATE Operation */
-// router.post('/edit/:id', bookController.processEditPage);
+router.post('/edit/:id', contactListController.processEditContact);
 
 // /* GET to perform  Deletion - DELETE Operation */
-// router.get('/delete/:id', bookController.performDelete);
+router.get('/delete/:id', contactListController.performDelete);
 
 module.exports = router;

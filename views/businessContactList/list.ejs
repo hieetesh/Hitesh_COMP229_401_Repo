@@ -1,1 +1,169 @@
-<h1><%= title %></h1>
+<link rel="stylesheet" href="/Content/list.css">
+<link rel="stylesheet" href='/bootstrap/dist/css/bootstrap.min.css'/>
+<link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+<section>
+  <!--for demo wrap-->
+  <h1><%= title %></h1>
+  <button href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" style="float:right">
+  <i class="fas fa-plus-circle"></i> Add a Contact
+  </button>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Contact Name</th>
+          <th>Contact Number</th>
+          <th>Contact Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0">
+      <tbody>
+        <% for(let count = 0; count < ContactList.length; count++) { %>
+        <tr>
+          <td><%= ContactList[count].contact_name %></td>
+          <td><%= ContactList[count].contact_number %></td>
+          <td><%= ContactList[count].email %></td>
+          <td>
+            <a id="<%= ContactList[count]._id %>" class="btn btn-primary btn-sm" onClick="onEditClick(this.id)">
+            <i class="fas fa-pencil-alt"></i> Edit</a>
+            <a id="<%= ContactList[count]._id %>" class="btn btn-danger btn-sm" onClick="onDeleteClick(this.id)">
+            <i class="fas fa-trash-alt"></i> Delete</a>
+          </td>
+        </tr>
+        <% } %>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add popup modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add New Contact</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Contact Name</label>
+                    <input id="contact-name" type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Contact Name"
+                    name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="authorTextField">Contact Number</label>
+                    <input id="contact-number" type="text" class="form-control"
+                    id="authorTextField"
+                    placeholder="Enter the Contact Number"
+                    name="author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="publishedTextField">Contact Email</label>
+                    <input id="contact-email" type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter the Email"
+                    name="published" required>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="save-button" type="button" class="btn btn-primary" type="submit">Save changes</button>
+                </div>
+
+            </form>
+        </div>
+        
+        </div>
+    </div>
+    </div>
+
+    <!-- Edit Popup -->
+
+    <div class="modal fade" id="exampleModalCenterEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitleEdit" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Edit Contact</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Contact Name</label>
+                    <input id="contact-name-edit" type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Contact Name"
+                    name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="authorTextField">Contact Number</label>
+                    <input id="contact-number-edit" type="text" class="form-control"
+                    id="authorTextField"
+                    placeholder="Enter the Contact Number"
+                    name="author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="publishedTextField">Contact Email</label>
+                    <input id="contact-email-edit" type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter the Email"
+                    name="published" required>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="save-button-edit" type="button" class="btn btn-primary" type="submit">Save changes</button>
+                </div>
+
+            </form>
+        </div>
+        
+        </div>
+    </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="exampleModalCenterDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitleDelete" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Delete Contact</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to permanently delete this contact?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="delete-button" type="button" class="btn btn-danger">Delete</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+</section>
+
+ <!-- JS scripts-->
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Smooth Scroll on Navbar button click !-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/Scripts/list.js"></script>
