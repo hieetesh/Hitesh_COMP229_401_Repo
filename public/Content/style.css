@@ -90,6 +90,23 @@ body{
     text-decoration: none;
 }
 
+/*
+Login Button Style
+*/
+
+.loginButton {
+    border-radius: 2px;
+    background-color: none;
+    border: 0.5px solid #bf5e2e;
+    /* color: #FFFFFF; */
+    text-align: center;
+    font-size: 15px;
+    padding: 4px 12px;
+    width: 100px;
+    cursor: pointer;
+    margin: 5px;
+}
+
   /* Sections and subsections Styling */
 
 .nav-item{

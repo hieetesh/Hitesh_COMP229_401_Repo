@@ -30,6 +30,7 @@ loginButton.addEventListener("click", (e)=>{
 
         });
     }).catch(error=>{
+        location.href = '/contact-list';
         throw error;
         console.log("error123", error);
         alert("Something went wrong 123.");

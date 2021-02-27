@@ -1,7 +1,6 @@
 
-
+<!--
 <main class="container">
-    <!-- Message Area -->
     <% if(messages.length > 0) {%>
         <div class="alert alert-danger">
             <%= messages %>
@@ -24,8 +23,7 @@
                     <input id="login-password" type="password" class="form-control"
                     name="password" placeholder="Enter password"
                      required>
-                    or
-                    <a href="/register">Register Here</a>
+
                 </fieldset>
 
                 <fieldset class="form-group text-right">
@@ -40,5 +38,49 @@
     </div>
 
 </main>
+
+-->
+
+
+<link rel="stylesheet" href="/Content/login.css">
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active"> Log In </h2>
+
+    <div class="fadeIn first">
+      <img src="../Assets/images/portfolio_logo_hitesh.png"  id="icon" alt="User Icon" />
+    </div>
+
+    <form>
+      <fieldset style="border:none" class="form-group">
+                    <!--<label for="username">Username: </label>-->
+                    <input id="login-username" type="text" class="form-control"
+                    name="username" placeholder="Enter username"
+                     required autofocus>
+                </fieldset>
+
+                <fieldset style="border:none" class="form-group">
+                    <!--<label for="password">Password: </label>-->
+                    <input id="login-password" type="password" class="form-control"
+                    name="password" placeholder="Enter password"
+                     required>
+
+                </fieldset>
+
+                <fieldset style="border:none" class="form-group text-right">
+                    <input id="login-button" type="button" class="btn btn-success" value="Login">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                    </a>
+                </fieldset>
+
+    </form>
+
+
+
+  </div>
+</div>
+
 
  <script src="/Scripts/login.js"></script>

@@ -6,6 +6,7 @@ let jwt = require('jsonwebtoken');
 let contactListModel = require('../model/contactListModel');
 
 module.exports.displayContactList = (req, res, next) => {
+
     contactListModel.find((err, contactList) => {
         if(err)
         {
@@ -14,7 +15,7 @@ module.exports.displayContactList = (req, res, next) => {
         else
         {
             //console.log("contactList123: ",contactList);
-            res.render('businessContactList/list', {title: 'Business Contact List', ContactList: contactList});      
+            res.render('businessContactList/list', {title: 'Business Contact List', ContactList: contactList, displayName: req.user ? req.user.displayName : ''});      
         }
     });
 }

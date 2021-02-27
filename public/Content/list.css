@@ -1,13 +1,27 @@
+body{
+  background: -webkit-linear-gradient(left, #DEDEDE, #DEDEDE);
+  background: linear-gradient(to right, #DEDEDE, #DEDEDE);
+  font-family: 'Roboto', sans-serif;
+}
 
-h1{
-    font-size: 30px;
-    color: #000;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 15px;
-    display:inline-block;
-  }
+.contact-section{
+  width:90% !important;
+  margin: 50px;
+  position: relative;
+}
+
+.title-contact{
+  font-weight: 200;
+  font-size: 40px;
+  font-size: 30px;
+  color: #000;
+  text-transform: uppercase;
+  /* font-weight: 300; */
+  text-align: center;
+  margin-bottom: 15px;
+  display:inline-block;
+  left:2px;
+}
   table{
     width:100%;
     table-layout: fixed;
@@ -43,14 +57,8 @@ h1{
   /* demo styles */
   
   /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
-  body{
-    background: -webkit-linear-gradient(left, #DEDEDE, #DEDEDE);
-    background: linear-gradient(to right, #DEDEDE, #DEDEDE);
-    font-family: 'Roboto', sans-serif;
-  }
-  section{
-    margin: 50px;
-  }
+
+  
   
   
   /* follow me template */
