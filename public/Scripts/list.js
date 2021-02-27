@@ -1,5 +1,18 @@
 console.log("Script started");
 
+
+let homeNavBar = document.getElementById("home-nav-bar");
+let aboutNavBar = document.getElementById("about-nav-bar");
+let servicesNavBar = document.getElementById("services-nav-bar");
+let projectsNavBar = document.getElementById("projects-nav-bar");
+let contactNavBar = document.getElementById("contact-nav-bar");
+
+homeNavBar.href = "/";
+aboutNavBar.href= "/#about";
+servicesNavBar.href= "/#services";
+projectsNavBar.href= "/#projects";
+contactNavBar.href= "/#contact";
+
 let saveButton = document.getElementById('save-button');
 saveButton.addEventListener("click", (e)=>{
     console.log("save clicked" , e.target.id);

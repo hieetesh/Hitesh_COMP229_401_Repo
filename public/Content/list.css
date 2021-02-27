@@ -5,9 +5,10 @@ body{
 }
 
 .contact-section{
-  width:90% !important;
+  width:90% ;
   margin: 50px;
   position: relative;
+  text-align: left;
 }
 
 .title-contact{

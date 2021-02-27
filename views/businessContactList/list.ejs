@@ -3,6 +3,7 @@
 
 <link rel="stylesheet" href='/bootstrap/dist/css/bootstrap.min.css'/>
 <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+<link rel = "icon" href="/Assets/images/portfolio_logo.png" type = "image/x-icon"> 
 
 <!-- Navigation Bar-->
 <%- include ../partials/mainNavBar.ejs %>
@@ -10,7 +11,7 @@
 <section class="contact-section">
   <!--for demo wrap-->
   <h1 class="title-contact"><%= title %></h1>
-  <button href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" style="float:right">
+  <button href="" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" style="float:right;background-color:rgba(191,94,46,0.8);border:none">
   <i class="fas fa-plus-circle"></i> Add a Contact
   </button>
   <div class="tbl-header">
@@ -34,7 +35,7 @@
           <td><%= ContactList[count].contact_number %></td>
           <td><%= ContactList[count].email %></td>
           <td>
-            <a id="<%= ContactList[count]._id %>" class="btn btn-primary btn-sm" onClick="onEditClick(this.id)">
+            <a id="<%= ContactList[count]._id %>" class="btn btn-primary btn-sm" style="background-color:#70BC48;border:none" onClick="onEditClick(this.id)">
             <i class="fas fa-pencil-alt"></i> Edit</a>
             <a id="<%= ContactList[count]._id %>" class="btn btn-danger btn-sm" onClick="onDeleteClick(this.id)">
             <i class="fas fa-trash-alt"></i> Delete</a>
