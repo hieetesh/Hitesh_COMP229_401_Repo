@@ -1,5 +1,8 @@
 console.log("Login Script started");
 
+//let apiHost = 'http://localhost:3000';
+let apiHost = 'https://hitesh-dharmadhikari.herokuapp.com';
+
 let loginButton = document.getElementById('login-button');
 loginButton.addEventListener("click", (e)=>{
 
@@ -11,7 +14,7 @@ loginButton.addEventListener("click", (e)=>{
     console.log("username",username,"password",password);
 
 
-    fetch('http://localhost:3000/login', {
+    fetch(apiHost+'/login', {
           method: 'POST',
           headers:{
               'Content-Type':'application/json',

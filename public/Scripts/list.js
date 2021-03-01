@@ -1,5 +1,9 @@
 console.log("Script started");
 
+//let apiHost = 'http://localhost:3000';
+let apiHost = 'https://hitesh-dharmadhikari.herokuapp.com';
+
+console.log("apiHost", apiHost);
 
 let homeNavBar = document.getElementById("home-nav-bar");
 let aboutNavBar = document.getElementById("about-nav-bar");
@@ -23,7 +27,7 @@ saveButton.addEventListener("click", (e)=>{
 
     console.log("name111: ", name, number, email);
 
-    fetch('http://localhost:3000/contact-list/add', {
+    fetch(apiHost+'/contact-list/add', {
           method: 'POST',
           headers:{
               'Content-Type':'application/json',
@@ -52,7 +56,7 @@ saveButton.addEventListener("click", (e)=>{
 function onEditClick(id){
     console.log("onEditClick123",id);   
 
-    fetch('http://localhost:3000/contact-list/edit/'+id, {
+    fetch(apiHost+'/contact-list/edit/'+id, {
           method: 'GET',
           headers:{
               'Content-Type':'application/json',
@@ -77,7 +81,7 @@ function onEditClick(id){
                 let numberEdit = document.getElementById('contact-number-edit').value;
                 let emailEdit = document.getElementById('contact-email-edit').value;
 
-                fetch('http://localhost:3000/contact-list/edit/'+id, {
+                fetch(apiHost+'/contact-list/edit/'+id, {
                     method: 'POST',
                     headers:{
                         'Content-Type':'application/json',
@@ -119,7 +123,7 @@ function onDeleteClick(id){
     let deleteButton = document.getElementById('delete-button');
     deleteButton.addEventListener("click", (e)=>{
 
-        fetch('http://localhost:3000/contact-list/delete/'+id, {
+        fetch(apiHost+'/contact-list/delete/'+id, {
             method: 'get',
             headers:{
                 'Content-Type':'application/json',
