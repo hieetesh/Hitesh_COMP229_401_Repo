@@ -1,3 +1,10 @@
+/* 
+File Name: style.css
+Student Name: Hitesh Dharmadhikari
+Student ID: 301150694
+Date: 2/3/2021
+*/
+
 console.log("Login Script started");
 
 //let apiHost = 'http://localhost:3000';

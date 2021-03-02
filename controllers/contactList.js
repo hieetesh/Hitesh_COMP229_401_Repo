@@ -17,8 +17,8 @@ module.exports.displayContactList = (req, res, next) => {
 
             //console.log("contactList123: ",contactList);
             contactList.sort(function(a, b){
-                if(a.contact_name < b.contact_name) { return -1; }
-                if(a.contact_name > b.contact_name) { return 1; }
+                if(a.contact_name.toUpperCase() < b.contact_name.toUpperCase()) { return -1; }
+                if(a.contact_name.toUpperCase() > b.contact_name.toUpperCase()) { return 1; }
                 return 0;
             })
             res.render('businessContactList/list', {title: 'Business Contact List', ContactList: contactList, displayName: req.user ? req.user.displayName : ''});      
